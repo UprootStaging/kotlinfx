@@ -148,7 +148,7 @@ fun <T> forit(col: Iterable<T>, f: (Iterator<T>) -> Unit) {
 }
 
 fun isArray(ty: String?): Boolean {
-    return arrayOf("ByteArray", "CharArray", "ShortArray", "IntArray", "LongArray", "FloatArray", "DoubleArray", "BooleanArray").containsRaw<String?>(ty)
+    return arrayOf("ByteArray", "CharArray", "ShortArray", "IntArray", "LongArray", "FloatArray", "DoubleArray", "BooleanArray").contains(ty)
 }
 
 /*

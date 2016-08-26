@@ -43,7 +43,7 @@ fun main(args: Array<String>) {
             val shortName = dekeyword(name.substring(0..name.length - 9)) + "p"
 
             val ty = kotlinfyType(method.genericReturnType!!.typeName!!)
-            val tyParamList = clazz.typeParameters.toArrayList()
+            val tyParamList = clazz.typeParameters.toMutableList()
             val tyParams = util.genTypeParamsString(tyParamList)
             val tyParamsFirst = util.genFirstTypeParamsString(tyParamList)
             val template =

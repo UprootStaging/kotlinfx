@@ -44,7 +44,7 @@ fun main(args: Array<String>) {
             }
 
             val valTyKt = kotlinfyType(valTy)
-            val tyParamList = clazz.typeParameters.toArrayList()
+            val tyParamList = clazz.typeParameters.toMutableList()
             val tyParams = util.genTypeParamsString(tyParamList)
             val tyParamsFirst = util.genFirstTypeParamsString(tyParamList)
             val template =

@@ -73,7 +73,7 @@ fun main(args: Array<String>) {
             var ty: String? = kotlinfyType(getter.genericReturnType!!.typeName!!)
             if (b) ty = getPropertyValueType(ty!!)
             val isArray = util.isArray(ty)
-            val tyParamList = clazz.typeParameters.toArrayList()
+            val tyParamList = clazz.typeParameters.toMutableList()
             val tyParams = util.genTypeParamsString(tyParamList)
             val tyParamsFirst = util.genFirstTypeParamsString(tyParamList)
             val template =
